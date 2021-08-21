@@ -23,6 +23,7 @@ let totalPrice = document.getElementById('totalPrice');
 
 // Promo
 const promoApply = document.getElementById('promoApply');
+let discountAmount = document.getElementById('discountAmount');
 let promoCode = document.getElementById('promoCode');
 let promoTotal = document.getElementById('promoTotal');
 let isPromo = false;
@@ -36,6 +37,7 @@ function promo() {
     if (isPromo == true) {
         const promoDiscount = parseFloat(totalPrice.innerText) / 20;
         promoTotal.innerText = parseFloat(totalPrice.innerText) - promoDiscount;
+        discountAmount.innerText = 20;
     }
     else {
         promoTotal.innerText = parseFloat(totalPrice.innerText);
