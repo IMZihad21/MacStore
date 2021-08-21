@@ -28,36 +28,36 @@
                 <div>
                     <div class="mt-10">
                         <h3 class="font-bold">Memory</h3>
-                        <button
+                        <button id="memory8GB"
                             class="border border-black hover:bg-gray-800 hover:text-white rounded mr-2 mt-2 py-2 px-2">
                             8GB unified memory
                         </button>
-                        <button class="border border-black hover:bg-gray-800 hover:text-white rounded py-2 px-2">
+                        <button id="memory16GB" class="border border-black hover:bg-gray-800 hover:text-white rounded py-2 px-2">
                             16GB unified memory
                         </button>
                     </div>
                     <div class="mt-10">
                         <h3 class="font-bold">Storage</h3>
-                        <button
+                        <button id="storage256GB"
                             class="border border-black hover:bg-gray-800 hover:text-white rounded mr-2 mt-2 py-2 px-2">
                             256GB SSD storage
                         </button>
-                        <button
+                        <button id="storage512GB"
                             class="border border-black hover:bg-gray-800 hover:text-white rounded mr-2 mt-2 py-2 px-2">
                             512GB SSD storage
                         </button>
-                        <button
+                        <button id="storage1TB"
                             class="border border-black hover:bg-gray-800 hover:text-white rounded mr-2 mt-2 py-2 px-2">
                             1TB SSD storage
                         </button>
                     </div>
                     <div class="mt-10">
                         <h3 class="font-bold">Choose your delivery option</h3>
-                        <button
+                        <button id="deliveryFree"
                             class="border border-black hover:bg-gray-800 hover:text-white rounded mr-2 mt-2 py-2 px-2">
                             Friday, Aug 25 FREE Prime Delivery
                         </button>
-                        <button
+                        <button id="delivery20"
                             class="border border-black hover:bg-gray-800 hover:text-white rounded mr-2 mt-2 py-2 px-2">
                             Friday, Aug 21 Delivery charge $20
                         </button>
@@ -67,35 +67,35 @@
                     <div class="table-row-group">
                         <div class="table-row">
                             <div class="table-cell font-semibold py-2">Best Price</div>
-                            <div class="table-cell font-semibold py-2">$<span>1299</span></div>
+                            <div class="table-cell font-semibold py-2">$<span id="bestPrice">1299</span></div>
                         </div>
                         <hr>
                         <div class="table-row">
                             <div class="table-cell font-semibold py-2">Extra Memory Cost</div>
-                            <div class="table-cell font-semibold py-2">$<span>0</span></div>
+                            <div class="table-cell font-semibold py-2">$<span id="memoryCost">0</span></div>
                         </div>
                         <hr>
                         <div class="table-row">
                             <div class="table-cell font-semibold py-2">Extra Storage Cost</div>
-                            <div class="table-cell font-semibold py-2">$<span>0</span></div>
+                            <div class="table-cell font-semibold py-2">$<span id="storageCost">0</span></div>
                         </div>
                         <hr>
                         <div class="table-row">
                             <div class="table-cell font-semibold py-2">Delivery charge</div>
-                            <div class="table-cell font-semibold py-2">$<span>0</span></div>
+                            <div class="table-cell font-semibold py-2">$<span id="deliveryCharge">0</span></div>
                         </div>
                         <hr class="border-2 border-black rounded my-2">
                         <div class="table-row">
                             <div class="table-cell font-semibold py-2">Total Price</div>
-                            <div class="table-cell font-semibold py-2">$<span>0</span></div>
+                            <div class="table-cell font-semibold py-2">$<span id="totalPrice">0</span></div>
                         </div>
                     </div>
                 </div>
                 <hr>
                 <div class="my-5">
                     <h3>Add promo code</h3>
-                    <input class="border border-black rounded px-4 py-2" type="text" name="" id="">
-                    <button class="border border-red-500 rounded px-4 py-2 bg-red-500 text-white">
+                    <input id="promoCode" class="border border-black rounded px-4 py-2" type="text" name="" id="">
+                    <button id="promoApply" class="border border-red-500 rounded px-4 py-2 bg-red-500 text-white">
                         Apply
                     </button>
                 </div>
@@ -103,7 +103,7 @@
         </section>
         <hr>
         <section>
-            <h1 class="text-5xl text-center pb-10 mt-5">Total: $<span>0</span></h1>
+            <h1 class="text-5xl text-center pb-10 mt-5">Total: $<span id="promoTotal">0</span></h1>
         </section>
     </main>
     <!-- Custom Scripts -->
