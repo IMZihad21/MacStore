@@ -27,6 +27,10 @@ let promoCode = document.getElementById('promoCode');
 let promoTotal = document.getElementById('promoTotal');
 let isPromo = false;
 
+/*--------------------
+    Main Functions
+---------------------*/
+
 // Manage Promo Discount
 function promo() {
     if (isPromo == true) {
@@ -45,6 +49,9 @@ function updateTotalPrice() {
     promo();
 }
 
+/*------------------------
+    OnClick Functions
+-------------------------*/
 memory8GB.addEventListener('click', function () {
     memoryCost.innerText = 0;
     updateTotalPrice();
