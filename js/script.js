@@ -18,11 +18,64 @@ const delivery20 = document.getElementById('delivery20');
 let bestPrice = document.getElementById('bestPrice');
 let memoryCost = document.getElementById('memoryCost');
 let storageCost = document.getElementById('storageCost');
-let deliveryCharge = document.getElementById('deliveryCharge');
+let deliveryCost = document.getElementById('deliveryCost');
 let totalPrice = document.getElementById('totalPrice');
 
 // Promo
 const promoApply = document.getElementById('promoApply');
 let promoCode = document.getElementById('promoCode');
 let promoTotal = document.getElementById('promoTotal');
+let isPromo = false;
 
+// Manage Promo Discount
+function promo() {
+    if (isPromo == true) {
+        const promoDiscount = parseFloat(totalPrice.innerText) / 20;
+        promoTotal.innerText = parseFloat(totalPrice.innerText) - promoDiscount;
+    }
+    else {
+        promoTotal.innerText = parseFloat(totalPrice.innerText);
+    }
+}
+
+// Update total prices in HTML
+function updateTotalPrice() {
+    const total = parseFloat(bestPrice.innerText) + parseFloat(memoryCost.innerText) + parseFloat(storageCost.innerText) + parseFloat(deliveryCost.innerText);
+    totalPrice.innerText = total;
+    promo();
+}
+
+memory8GB.addEventListener('click', function () {
+    memoryCost.innerText = 0;
+    updateTotalPrice();
+})
+memory16GB.addEventListener('click', function () {
+    memoryCost.innerText = 180;
+    updateTotalPrice();
+})
+storage256GB.addEventListener('click', function () {
+    storageCost.innerText = 0;
+    updateTotalPrice();
+})
+storage512GB.addEventListener('click', function () {
+    storageCost.innerText = 100;
+    updateTotalPrice();
+})
+storage1TB.addEventListener('click', function () {
+    storageCost.innerText = 180;
+    updateTotalPrice();
+})
+deliveryFree.addEventListener('click', function () {
+    deliveryCost.innerText = 0;
+    updateTotalPrice();
+})
+delivery20.addEventListener('click', function () {
+    deliveryCost.innerText = 20;
+    updateTotalPrice();
+})
+promoApply.addEventListener('click', function () {
+    if (promoCode.value == 'stevekaku') {
+        isPromo = true;
+        promo();
+    }
+})
