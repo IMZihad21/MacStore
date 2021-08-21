@@ -83,7 +83,7 @@ delivery20.addEventListener('click', function () {
     updateTotalPrice();
 })
 promoApply.addEventListener('click', function () {
-    if (promoCode.value == 'stevekaku') {
+    if (promoCode.value.toLowerCase() == 'stevekaku') {
         isPromo = true;
         promo();
     }
