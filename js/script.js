@@ -35,7 +35,7 @@ let isPromo = false;
 // Manage Promo Discount
 function promo() {
     if (isPromo == true) {
-        const promoDiscount = parseFloat(totalPrice.innerText) / 20;
+        const promoDiscount = parseFloat(totalPrice.innerText) / 100 * 20;
         promoTotal.innerText = parseFloat(totalPrice.innerText) - promoDiscount;
         discountAmount.innerText = 20;
     }
